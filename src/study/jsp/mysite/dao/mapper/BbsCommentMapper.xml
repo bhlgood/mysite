@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 이 XML의 구조대로 구현될 클래스의 이름 => Impl클래스를 대체한다. -->
+<mapper namespace="BbsCommentMapper">
+
+	<!-- Beans 클래스의 객체이름(id)과 클래스이름(type)을 명시한다. -->
+	<resultMap id="bbs_comment" type="study.jsp.mysite.model.BbsComment">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="writerName" column="writer_name" />
+		<result property="writerPw" column="writer_pw" />
+		<result property="email" column="email" />
+		<result property="content" column="content" />
+		<result property="regDate" column="reg_date" />
+		<result property="editDate" column="edit_date" />
+		<result property="ipAddress" column="ip_address" />
+		<result property="memberId" column="member_id" />
+		<result property="bbsDocumentId" column="bbs_document_id" />
+	</resultMap>
+
+</mapper>
+
